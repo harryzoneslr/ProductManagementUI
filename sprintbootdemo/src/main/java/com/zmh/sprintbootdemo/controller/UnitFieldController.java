@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -17,12 +18,20 @@ public class UnitFieldController {
     @Autowired
     private UnitFieldService unitFieldService;
 
+    @GetMapping("/getAllUnitField")
+    public Object getAllUnitField(HttpServletRequest request, HttpServletResponse response){
+        List<UnitField> list = this.unitFieldService.getAllUnitField();
+        return list;
+    }
+
     @GetMapping("/getUnitFieldById")
     public Object getUnitFieldById(HttpServletRequest request, HttpServletResponse response){
         String id = (String) request.getParameter("id");
         String systemCategory = (String) request.getParameter("systemCategory");
         Optional<UnitField> unitField = this.unitFieldService.getUnitFieldById(Integer.parseInt(id),Integer.parseInt(systemCategory));
-        return unitField.get();
+        List<UnitField> list = new ArrayList<UnitField>();
+        list.add(unitField.get());
+        return list;
     }
 
     @GetMapping("/getUnitFieldByName")
@@ -30,7 +39,9 @@ public class UnitFieldController {
         String name = (String) request.getParameter("name");
         String systemCategory = (String) request.getParameter("systemCategory");
         Optional<UnitField> unitField = this.unitFieldService.getUnitFieldByName(name,Integer.parseInt(systemCategory));
-        return unitField.get();
+        List<UnitField> list = new ArrayList<UnitField>();
+        list.add(unitField.get());
+        return list;
     }
 
     @GetMapping("/getUnitFieldByIdAndName")
@@ -39,7 +50,9 @@ public class UnitFieldController {
         String name = (String) request.getParameter("name");
         String systemCategory = (String) request.getParameter("systemCategory");
         Optional<UnitField> unitField = this.unitFieldService.getUnitFieldByIdAndName(Integer.valueOf(id),name,Integer.parseInt(systemCategory));
-        return unitField.get();
+        List<UnitField> list = new ArrayList<UnitField>();
+        list.add(unitField.get());
+        return list;
     }
 
     @GetMapping("/getUnitFieldBySystemCategory")

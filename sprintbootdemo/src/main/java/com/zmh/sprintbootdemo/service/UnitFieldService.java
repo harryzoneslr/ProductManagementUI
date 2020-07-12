@@ -14,6 +14,10 @@ public class UnitFieldService {
     @Autowired
     private UnitFieldRepository unitFieldRepository;
 
+    public List<UnitField> getAllUnitField(){
+        return unitFieldRepository.findAll();
+    }
+
     public List<UnitField> getUnitFieldBySystemCategory(int systemCategory){
         return unitFieldRepository.findBySystemCategory(systemCategory);
     }
