@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/ProductManagementUI.iml" filepath="$PROJECT_DIR$/.idea/ProductManagementUI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sprintbootdemo/sprintbootdemo.iml" filepath="$PROJECT_DIR$/sprintbootdemo/sprintbootdemo.iml" />
     </modules>
   </component>
 </project>
