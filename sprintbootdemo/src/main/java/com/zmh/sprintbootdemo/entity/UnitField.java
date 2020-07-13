@@ -44,6 +44,6 @@ public class UnitField {
     @Column(name = "refer_unituuid")
     private int referUnitUUID;
     //	标准参考单位转率
-    @Column(name = "to_refer_unit_facor")
-    private double toReferUnitFacor;
+    @Column(name = "to_refer_unit_factor")
+    private double toReferUnitFactor;
 }

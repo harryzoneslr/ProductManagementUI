@@ -23,17 +23,17 @@ DROP TABLE IF EXISTS `unit_field`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `unit_field` (
-  `uuid` int NOT NULL,
-  `id` int NOT NULL,
+  `uuid` int NOT NULL AUTO_INCREMENT,
+  `id` int DEFAULT NULL,
   `name` varchar(255) DEFAULT NULL,
   `note` varchar(255) DEFAULT NULL,
-  `refer_unituuid` int NOT NULL,
-  `system_category` int NOT NULL,
-  `to_refer_unit_facor` double NOT NULL,
-  `type` int NOT NULL,
-  `unit_category` int NOT NULL,
+  `refer_unituuid` int DEFAULT NULL,
+  `system_category` int DEFAULT NULL,
+  `to_refer_unit_factor` double DEFAULT NULL,
+  `type` int DEFAULT NULL,
+  `unit_category` int DEFAULT NULL,
   PRIMARY KEY (`uuid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +42,7 @@ CREATE TABLE `unit_field` (
 
 LOCK TABLES `unit_field` WRITE;
 /*!40000 ALTER TABLE `unit_field` DISABLE KEYS */;
-INSERT INTO `unit_field` VALUES (1,1,'kg','meiyou',1,1,1,1,1);
+INSERT INTO `unit_field` VALUES (1,1,'kg','meiyou',1,1,1,1,1),(2,2,'g','meiyou',1,1,1,1,1),(3,4,'t','meiyou',1,1,1,1,1),(5,5,'mg','meiyou',1,2,1,1,1);
 /*!40000 ALTER TABLE `unit_field` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-07-10 15:19:12
+-- Dump completed on 2020-07-13 18:03:42

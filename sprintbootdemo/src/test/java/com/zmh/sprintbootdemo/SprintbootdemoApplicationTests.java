@@ -45,7 +45,7 @@ class SprintbootdemoApplicationTests {
         unitField.setName("kg");
         unitField.setNote("meiyou");
         unitField.setSystemCategory(1);
-        unitField.setToReferUnitFacor(1);
+        unitField.setToReferUnitFactor(1);
         unitField.setType(1);
         unitField.setUnitCategory(1);
         unitField.setReferUnitUUID(1);

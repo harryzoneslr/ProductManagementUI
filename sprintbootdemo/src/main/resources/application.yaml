@@ -7,7 +7,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/demo?useSSL=false
     username: root
-    password: A123456 #Change to root before submit!
+    password: root #Change to root before submit!
   jpa:
     hibernate:
       ddl-auto: update

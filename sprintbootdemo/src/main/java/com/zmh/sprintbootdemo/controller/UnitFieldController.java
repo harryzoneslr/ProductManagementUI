@@ -62,12 +62,6 @@ public class UnitFieldController {
         return list;
     }
 
-    @GetMapping("/saveUnitField")
-    public void saveUnitField(HttpServletRequest request, HttpServletResponse response){
-        UnitField unitField = new UnitField();
-        unitFieldService.saveUnitField(unitField);
-    }
-
     @GetMapping("/getReferenceUnit")
     public Object getReferenceUnit(HttpServletRequest request, HttpServletResponse response){
         String unitCategory = (String) request.getParameter("unitCategory");
