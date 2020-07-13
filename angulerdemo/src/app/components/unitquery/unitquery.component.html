@@ -1,0 +1,42 @@
+<script src="unitquery.component.ts"></script>
+
+<h2>单位搜索界面</h2>
+<button (click)="getUnitFieldList()">搜索</button>
+<br>
+<div>
+  <h3>搜索条件</h3>
+  <hr>
+  单位编号<input type="text" id="unitId" [(ngModel)]="id">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  单位名称<input type="text" id="unitName" [(ngModel)]="name">
+  <br>
+  系统类别<select name="systemCategory" id="systemCategory" [(ngModel)]="systemCategory">
+          <option value="1">物理单位</option>
+          <option value="2">包装单位</option>
+        </select>
+</div>
+<br>
+<br>
+<div>
+  <h3>系统标准单位数据</h3>
+  <table border="1">
+    <tr>
+      <th>标号</th>
+      <th>单位编号</th>
+      <th>单位名称</th>
+      <th>单位类别</th>
+      <th>单位类型</th>
+      <th>参考单位</th>
+      <th>转化率</th>
+    </tr>
+    <tr *ngFor="let item of myUnitField">
+      <th><button (click)="sendMessage(item.uuid)" >{{item.uuid}}</button></th>
+      <th>{{item.id}}</th>
+      <th>{{item.name}}</th>
+      <th>{{item.unitCategory}}</th>
+      <th>{{item.type}}</th>
+      <th>{{item.referUnitUUID}}</th>
+      <th>{{item.toReferUnitFactor}}</th>
+    </tr>
+  </table>
+</div>
+

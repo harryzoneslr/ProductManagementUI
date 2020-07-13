@@ -1,0 +1,48 @@
+<script src="unitedit.component.html"></script>
+
+<h2>系统标准单位编辑页面</h2>
+<button (click)="saveUnitField()">保存</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button (click)="clickQuit()">退出</button>
+<br>
+
+{{unitField | json}}
+
+<div>
+  <div>
+    <h3>系统标准单位</h3>
+    <hr>
+    单位编号<input type="text" id="unitId" [(ngModel)]="unitField.id"/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    单位名称<input type="text" id="unitName" [(ngModel)]="unitField.name"/>
+    <br>
+    系统类别<select name="systemCategory" id="systemCategory" [(ngModel)]="unitField.systemCategory">
+            <option value="1">物理单位</option>
+            <option value="2">包装单位</option>
+          </select>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    单位类型<select name="type" id="type" [(ngModel)]="unitField.type">
+            <option value="1">国际化标准单位</option>
+            <option value="2">企业全局单位</option>
+          </select>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    单位类别<select name="unitCategory" id="unitCategory" [(ngModel)]="unitField.unitCategory">
+            <option value="1">包装单位</option>
+            <option value="2">重量单位</option>
+            <option value="2">体积单位</option>
+            <option value="2">长度单位</option>
+          </select>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <br>
+    备注信息<textarea name="note" id="note" cols="30" rows="10" [(ngModel)]="unitField.note"></textarea>
+  </div>
+  <div>
+    <h3>同类别单位转换信息</h3>
+    <hr>
+    标准参考单位<select name="referUnitUUID" id="referUnitUUID" [(ngModel)]="unitField.referUnitUUID">
+                <option value="1">kg</option>
+              </select>
+    <br>
+    <br>
+    转化率<input type="text" id="toReferUnitFactor" [(ngModel)]="unitField.toReferUnitFactor"/>
+  </div>
+</div>
