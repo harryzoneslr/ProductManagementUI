@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { DashBoardComponent } from './dashBoard.component';
+import {routes} from "../app-routing.module";
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -12,7 +14,8 @@ import { DashBoardComponent } from './dashBoard.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(routes)
   ],
   exports: [DashBoardComponent],
   providers: []

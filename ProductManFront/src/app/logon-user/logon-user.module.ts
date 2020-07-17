@@ -4,12 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
-import { NavBarComponent } from './navBar.component';
+import { LogonUserComponent } from './logon-user.component';
 import {routes} from "../app-routing.module";
 
 @NgModule({
   declarations: [
-    NavBarComponent
+    LogonUserComponent
   ],
   imports: [
     BrowserModule,
@@ -17,7 +17,7 @@ import {routes} from "../app-routing.module";
     HttpModule,
     RouterModule.forRoot(routes)
   ],
-  exports: [NavBarComponent],
+  exports: [LogonUserComponent],
   providers: []
 })
-export class NavBarModule { }
+export class LogonUserModule { }

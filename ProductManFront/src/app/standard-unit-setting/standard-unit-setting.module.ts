@@ -4,12 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
-import { NavBarComponent } from './navBar.component';
+import { StandardUnitSettingComponent } from './standard-unit-setting.component';
 import {routes} from "../app-routing.module";
 
 @NgModule({
   declarations: [
-    NavBarComponent
+    StandardUnitSettingComponent
   ],
   imports: [
     BrowserModule,
@@ -17,7 +17,7 @@ import {routes} from "../app-routing.module";
     HttpModule,
     RouterModule.forRoot(routes)
   ],
-  exports: [NavBarComponent],
+  exports: [StandardUnitSettingComponent],
   providers: []
 })
-export class NavBarModule { }
+export class StandardUnitSettingModule { }
