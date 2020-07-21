@@ -3,19 +3,19 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-import { LogonUserComponent } from './logon-user.component';
+import { LogonUserDetailComponent } from './logon-user-detail.component';
 import {routes} from '../app-routing.module';
 
 @NgModule({
   declarations: [
-    LogonUserComponent
+    LogonUserDetailComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(routes)
   ],
-  exports: [LogonUserComponent],
+  exports: [LogonUserDetailComponent],
   providers: []
 })
-export class LogonUserModule { }
+export class LogonUserDetailModule { }

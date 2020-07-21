@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Routes, RouterModule, RouterOutlet } from '@angular/router'; // CLI imports router
+import { LogonUserService } from '../services/logonUser/logonUser.service';
+import {LogonUserUIModel}  from '../model/LogonUserUIModel';
+import {Observable} from 'rxjs/internal/Observable'; // CLI imports router
 
 @Component({
   selector: 'app-logon-user',
@@ -7,10 +9,19 @@ import { Routes, RouterModule, RouterOutlet } from '@angular/router'; // CLI imp
   styleUrls: ['./logon-user.component.css']
 })
 export class LogonUserComponent implements OnInit {
+  logonUserList$: Observable<LogonUserUIModel[]>;
 
-  constructor() { }
+  constructor(private logonUserService: LogonUserService) { }
 
   ngOnInit() {
+    this.loadDataList();
+  }
+
+  /**
+   * Function to generate dummy product list, should be replaced backend API call logic later
+   */
+  loadDataList(){
+    this.logonUserList$ = this.logonUserService.getDataList();
   }
 
 }

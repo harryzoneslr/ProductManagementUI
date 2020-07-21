@@ -19,4 +19,11 @@ export class ProductComponent implements OnInit {
   ngOnInit() {
   }
 
+  /**
+   * Function to generate dummy product list, should be replaced backend API call logic later
+   */
+  ngDummyProduct(){
+    var productList = [];
+  }
+
 }
