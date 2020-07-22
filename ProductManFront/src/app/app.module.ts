@@ -5,12 +5,11 @@ import { routes, AppRoutingModule } from './app-routing.module';
 import { Routes, RouterModule, RouterOutlet } from '@angular/router'; // CLI imports router
 
 import { NavBarModule } from  './navBars/navBar.module';
-import { DashBoardModule } from './dashBoards/dashBoard.module';
 import { AppComponent } from './app.component';
-import { StandardUnitSettingComponent } from './standard-unit-setting/standard-unit-setting.component';
-import { ProductComponent } from './product/product.component';
-import { LogonUserComponent } from './logon-user/logon-user.component';
-import { LogonUserDetailComponent } from './logon-user-detail/logon-user-detail.component';
+import { StandardUnitSettingComponent } from './view/standard-unit-setting/standard-unit-setting.component';
+import { ProductComponent } from './view/product/product.component';
+import { LogonUserComponent } from './view/logon-user/logon-user.component';
+import { LogonUserDetailComponent } from './view/logon-user-detail/logon-user-detail.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +22,6 @@ import { LogonUserDetailComponent } from './logon-user-detail/logon-user-detail.
   ],
   imports: [
     NavBarModule,
-    DashBoardModule,
     BrowserModule,
     FormsModule,
     AppRoutingModule,

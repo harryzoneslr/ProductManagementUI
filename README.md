@@ -7,6 +7,11 @@ To start angular:
 2. Use commands 'ng serve --open'
 3. Visit localhost:4200 in the browser
 
+To start angular with Bootstrap4 theme:
+1. cd in /ProductManFront
+2. Use commands 'ng serve --open'
+3. Visit localhost:4200 in the browser
+
 To start springboot
 1. main()Enter the project and start directly in the main() method
 

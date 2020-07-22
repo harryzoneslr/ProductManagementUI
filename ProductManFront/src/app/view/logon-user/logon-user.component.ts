@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { LogonUserService } from '../services/logonUser/logonUser.service';
-import {LogonUserUIModel}  from '../model/LogonUserUIModel';
+import { LogonUserService } from '../../services/logonUser/logonUser.service';
+import {LogonUserUIModel}  from '../../model/LogonUserUIModel';
 import {Observable} from 'rxjs/internal/Observable'; // CLI imports router
 
 @Component({

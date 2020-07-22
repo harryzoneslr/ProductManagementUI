@@ -206,7 +206,7 @@
                     <!-- Avatar -->
                     <div class="avatar avatar-xs align-middle mr-2">
                       <img class="avatar-img rounded-circle" [src]="logonUser.avatar" alt="...">
-                    </div> <a class="item-name text-reset" [routerLink]="['/logonUserDetail',logonUser.uuid]"  >{{logonUser.name}}</a>
+                    </div> <a class="item-name text-reset" routerLink="/logonUser/{{logonUser.uuid}}"  >{{logonUser.name}}</a>
                   </td>
                   <td>
                     <span class="item-title">{{logonUser.role}}</span>

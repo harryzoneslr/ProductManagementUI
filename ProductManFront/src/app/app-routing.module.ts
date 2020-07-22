@@ -1,12 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { DashBoardComponent } from  './dashBoards/dashBoard.component';
-import { ProductComponent } from  './product/product.component';
-import { LogonUserComponent } from  './logon-user/logon-user.component';
-import { LogonUserDetailComponent } from  './logon-user-detail/logon-user-detail.component';
-import { StandardUnitSettingComponent } from  './standard-unit-setting/standard-unit-setting.component';
+import { DashBoardComponent } from './view/dashBoards/dashBoard.component';
+import { ProductComponent } from './view/product/product.component';
+import { LogonUserComponent } from './view/logon-user/logon-user.component';
+import { LogonUserDetailComponent } from './view/logon-user-detail/logon-user-detail.component';
+import { StandardUnitSettingComponent } from './view/standard-unit-setting/standard-unit-setting.component';
 import { Routes, RouterModule, RouterOutlet } from '@angular/router'; // CLI imports router
 
 /**
@@ -17,7 +15,7 @@ export const routes: Routes = [
   { path: 'product', component: ProductComponent},
   { path: 'standardUnitSetting', component: StandardUnitSettingComponent },
   { path: 'logonUser', component: LogonUserComponent },
-  { path: 'logonUserDetail', component: LogonUserDetailComponent },
+  { path: 'logonUser/:uuid', component: LogonUserDetailComponent },
   { path: 'dashBoards', component: DashBoardComponent },
   { path: '',
     redirectTo: '/dashBoards',
